@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.matias.externalstorange.MainActivity"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/et_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Message"/>
+
+    <EditText
+        android:id="@+id/et_filename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Filename"
+        android:layout_below="@id/et_msg"/>
+
+    <Button
+        android:id="@+id/btn_sharedPref"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Shared Preferences"
+        android:onClick="saveSharedPref"
+        android:layout_below="@id/et_filename"/>
+
+    <Button
+        android:id="@+id/btn_intCache"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Internal Cache"
+        android:onClick="saveInternalCache"
+        android:layout_below="@id/btn_sharedPref"/>
+
+    <Button
+        android:id="@+id/btn_intStorage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Internal Storage"
+        android:onClick="saveInternalStorage"
+        android:layout_below="@id/btn_intCache"/>
+
+    <Button
+        android:id="@+id/btn_extCache"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="External Cache"
+        android:onClick="saveExternalCache"
+        android:layout_below="@id/btn_intStorage"/>
+
+    <Button
+        android:id="@+id/btn_extStorage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="External Storage"
+        android:onClick="saveExternalStorage"
+        android:layout_below="@id/btn_extCache"/>
+
+    <Button
+        android:id="@+id/btn_extPublic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ext. Public Storage"
+        android:onClick="saveExternalPublic"
+        android:layout_below="@id/btn_extStorage"/>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:onClick="nextActivity"
+        android:layout_below="@id/btn_extPublic"/>
+
+</RelativeLayout>

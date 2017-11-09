@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.matias.externalstorange.NextActivity"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/et_filename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Filename"/>
+
+    <TextView
+        android:id="@+id/tv_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Message"
+        android:padding="5dp"
+        android:layout_below="@id/et_filename"
+        android:textSize="18dp"/>
+
+    <Button
+        android:id="@+id/btn_loadSharedPref"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Load Shared Preferences"
+        android:onClick="loadSharedPref"
+        android:layout_below="@id/tv_display"/>
+
+    <Button
+        android:id="@+id/btn_loadInternalCache"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Load Internal Cache"
+        android:onClick="loadInternalCache"
+        android:layout_below="@id/btn_loadSharedPref"/>
+
+    <Button
+        android:id="@+id/btn_loadInternalStorage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Load Internal Storage"
+        android:onClick="loadInternalStorage"
+        android:layout_below="@id/btn_loadInternalCache"/>
+
+    <Button
+        android:id="@+id/btn_loadExternalCache"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Load External Cache"
+        android:onClick="loadExternalCache"
+        android:layout_below="@id/btn_loadInternalStorage"/>
+
+    <Button
+        android:id="@+id/btn_loadExternalStorage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Load External Storage"
+        android:onClick="loadExternalStorage"
+        android:layout_below="@id/btn_loadExternalCache"/>
+
+    <Button
+        android:id="@+id/btn_loadExternalPublic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Load Ext. Public Storage"
+        android:onClick="loadExternalPublic"
+        android:layout_below="@id/btn_loadExternalStorage"/>
+
+    <Button
+        android:id="@+id/btn_prev"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Previous"
+        android:onClick="prevActivity"
+        android:layout_below="@id/btn_loadExternalPublic"/>
+
+</RelativeLayout>
